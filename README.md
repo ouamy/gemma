@@ -1,6 +1,6 @@
-# DeepSeek Coder
+# Gemma 3
 
-A small, instruction-tuned AI model for clean code generation.
+An AI model for efficient local use and fine-tuning.
 
 ---
 
@@ -10,7 +10,7 @@ This project requires one large model file, which cannot be included directly du
 
 | Model              | Description          | Download Link                                                                                      |
 |--------------------|----------------------|--------------------------------------------------------------------------------------------------|
-| DeepSeek Coder model  | Core language model weights | [Download here](https://drive.google.com/file/d/1VjSNIJzmBmeX2BOPor_B2dAgj_SjdrpR/view?usp=drive_link) |
+| Gemma 3 model  | Core language model weights | [Download here](https://drive.google.com/file/d/1zPO4PN7q3z-qn49Pl0Ddd6gD_bwrbwMj/view?usp=drive_link) |
 
 ---
 
@@ -19,16 +19,16 @@ This project requires one large model file, which cannot be included directly du
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/ouamy/deepseek.git
-cd deepseek
+git clone https://github.com/ouamy/gemma.git
+cd gemma
 ```
 
 2. Download the model file from the link above and place it in the `models/` directory:
 
 ```bash
-deepseek/
+gemma/
 └── models/
-    └── deepseek-coder-1.3b-instruct.Q2_K.gguf
+    └── gemma-3-1b-it-Q4_K_M.gguf
 ```
 
 3. Copy all the .so files to /usr/local/lib and run ldconfig
@@ -44,8 +44,7 @@ sudo ldconfig
 
 Start the server with the model:
 ```bash
-build/bin/llama-server \
-    -m models/deepseek-coder-1.3b-instruct.Q2_K.gguf
+build/bin/llama-server -m models/gemma-3-1b-it-Q4_K_M.gguf
 ```
 
 This will start the server on:
